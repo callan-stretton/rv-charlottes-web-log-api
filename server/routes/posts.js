@@ -6,4 +6,11 @@ const bodyParser = require('body-parser')
 
 router.use(bodyParser.json())
 
+router.get('/', (req, res) => {
+  db.getPosts()
+    .then(data => {
+      res.json(data)
+    })
+})
+
 module.exports = router
