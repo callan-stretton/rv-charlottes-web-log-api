@@ -4,7 +4,6 @@ const knex = require('knex')(config)
 
 function getPosts () {
   return knex('posts')
-  // .then(convertArrayToCamelCase)
 }
 
 module.exports = {
